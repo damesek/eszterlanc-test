@@ -1,5 +1,18 @@
 (ns eszterlanc-test.core
-  (:require [eszterlanc.core :as c]))
+  (:require [eszterlanc.core :as c]
+            [eszterlanc.gui :as GUI]))
 
-(c/object->clj
-  (c/sentence-array "Kezdetben Isten teremtette baglyokat"))
+
+(defn init
+  "that was easier than I planned.."
+  []
+  (GUI/init))
+
+(comment
+
+  (init)
+
+  (c/object->clj
+    (c/sentence-array "Kezdetben Isten teremtette baglyokat"))
+
+  )
