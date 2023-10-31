@@ -1,4 +1,4 @@
-/target
+target/
 /classes
 /checkouts
 profiles.clj
@@ -12,8 +12,8 @@ pom.xml.asc
 .hgignore
 .hg/
 
-/src/java
-/.idea
-/.git
+src/java/
+.idea/
+.git/
 
 
