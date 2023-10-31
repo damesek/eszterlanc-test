@@ -1,13 +1,25 @@
-/target
-/classes
-/checkouts
+# Build and Leiningen files
+target/
+classes/
+checkouts/
 profiles.clj
 pom.xml
 pom.xml.asc
 *.jar
 *.class
-/.lein-*
-/.nrepl-port
-/.prepl-port
+.lein-*
+.nrepl-port
+.prepl-port
+
+# Version control
 .hgignore
 .hg/
+
+# Java source
+src/java/
+
+# IDE files
+.idea/
+
+
+

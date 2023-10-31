@@ -3,6 +3,3 @@
 
 (c/object->clj
   (c/sentence-array "Kezdetben Isten teremtette baglyokat"))
-
-
-

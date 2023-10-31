@@ -1,11 +1,20 @@
 ### Using via Clojars (maven)
 
-!! That is important, because the file is too large. I can't upload to Clojars.
+The Magyarlanc model files are large, so I've uploaded them to an S3 bucket.
 
-Do you need to download from https://drive.google.com/file/d/1AUcEjCgVqAVXPTqEzXAuSXgx10GDyxYx/view?usp=sharing the magyarlanc-3.0.zip file.
-Do you need to unzip to "src/java" folder and add to project.clj the source. 
+# initialize
 
-For example:
+## auto
+
+Run the initialize shell script. This will download and unzip the entire folder for you.
+
+## manually
+
+Please download the file from the following link: https://eszterlanc.s3.amazonaws.com/magyarlanc-3_0.zip.
+Unzip it in the root directory, and it will be placed in the src/java folder for you.
+
+In project.clj, please add the Java source path.
+
 
 ```clojure 
 (defproject eszterlanc-test "0.1.0-SNAPSHOT"
@@ -18,4 +27,3 @@ For example:
             :java-source-paths ["src/java"]
             :repl-options {:init-ns eszterlanc-test.core})
 ```
-Test repository: https://github.com/damesek/eszterlanc-test
