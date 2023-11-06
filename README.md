@@ -1,15 +1,17 @@
-### Using via Clojars (maven)
+# Setup 
 
 The Magyarlanc model files are large, so I've uploaded them to an S3 bucket.
 
-# initialize
+## initialize
 
-2023-11+06 I updated the initialize script
+On 2023-11-06, I updated the initialization script.
 
-We install to local Maven repository the MTA-SZTA Magyarlanc Jar file.
-Run the initialize shell script. 
+The script installs the MTA-SZTA Magyarlanc JAR file to the local Maven repository.
+Please execute the initialization shell script to complete this process.
 
-You can find the jar file in the lib folder.
+`./initialize`
+
+You will find the JAR file located within the lib directory.
 Add to project `mta.szta.rgai/magyarlanc` and `org.clojars.baader/eszterlanc`.
 
 ```clojure 
@@ -22,4 +24,26 @@ Add to project `mta.szta.rgai/magyarlanc` and `org.clojars.baader/eszterlanc`.
                            [org.clojars.baader/eszterlanc "0.3.0"]
                            [mta.szte.rgai/magyarlanc "0.3.0"]]
             :repl-options {:init-ns eszterlanc-test.core})
+```
+
+
+## Run tests
+
+```clojure
+(ns eszterlanc-test.core
+  (:require [eszterlanc.core :as c]
+            [eszterlanc.gui :as GUI]))
+
+
+(defn init
+  "that was easier than I planned.."
+  []
+  (GUI/init))
+
+
+(init)
+
+(c/object->clj
+  (c/sentence-array "Kezdetben Isten teremtette baglyokat"))
+
 ```
